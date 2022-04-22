@@ -22,4 +22,9 @@ export class TasksService {
 
     return task;
   }
+
+  getTaskById(id: string) {
+    const task = this.tasks.find((t) => t.id === id);
+    return task;
+  }
 }
