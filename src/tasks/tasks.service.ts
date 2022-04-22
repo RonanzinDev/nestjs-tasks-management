@@ -27,4 +27,10 @@ export class TasksService {
     const task = this.tasks.find((t) => t.id === id);
     return task;
   }
+  deleteTask(id: string) {
+    // another solution
+    //this.tasks = this.tasks.find((task) => task.id != id);
+    const task = this.tasks.findIndex((task) => task.id == id);
+    delete this.tasks[task];
+  }
 }
